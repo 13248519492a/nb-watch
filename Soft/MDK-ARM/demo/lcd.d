@@ -169,5 +169,8 @@ demo\lcd.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\lcd.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\lcd.o: ../app/inc/button.h
 demo\lcd.o: ../Core/Inc/gpio.h
+demo\lcd.o: ../app/inc/W25Q32.h
 demo\lcd.o: ../Core/Inc/spi.h
+demo\lcd.o: ../Core/Inc/main.h
+demo\lcd.o: ../Core/Inc/dma.h
 demo\lcd.o: ../Core/Inc/tim.h

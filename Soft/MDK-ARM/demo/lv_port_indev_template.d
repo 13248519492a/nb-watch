@@ -172,3 +172,5 @@ demo\lv_port_indev_template.o: ../app/inc/lvgl_func.h
 demo\lv_port_indev_template.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\lv_port_indev_template.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\lv_port_indev_template.o: ../app/inc/button.h
+demo\lv_port_indev_template.o: ../app/inc/W25Q32.h
+demo\lv_port_indev_template.o: ../Core/Inc/dma.h

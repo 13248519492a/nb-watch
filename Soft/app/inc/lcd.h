@@ -5,10 +5,9 @@
 
 
 void Fill_color(uint16_t xsta,uint16_t ysta,uint16_t xend,uint16_t yend,uint16_t color);
-void lv_Fill_color(uint16_t xsta,uint16_t ysta,uint16_t xend,uint16_t yend, uint16_t *color);
-void lv_ShowPicture(uint16_t x,uint16_t y,uint16_t length,uint16_t width, uint8_t pic[]);
-
-
+void lv_Fill_color_DMA(uint16_t xsta,uint16_t ysta,uint16_t xend,uint16_t yend, lv_color_t *color);
+void lv_ShowPicture_DMA(uint16_t x,uint16_t y,uint16_t length,uint16_t width, uint8_t pic[]);
+void W25Q32_ShowPicture(uint16_t x,uint16_t y,uint16_t length,uint16_t width);
 //»­±ÊÑÕÉ«
 #define WHITE         	 0xFFFF
 #define BLACK         	 0x0000	  

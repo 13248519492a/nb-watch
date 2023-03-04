@@ -171,3 +171,5 @@ demo\button.o: ../app/inc/lvgl_func.h
 demo\button.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\button.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\button.o: ../app/inc/button.h
+demo\button.o: ../app/inc/W25Q32.h
+demo\button.o: ../Core/Inc/dma.h

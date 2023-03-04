@@ -34,12 +34,32 @@ void Flash_Write_Enable(void)
 }
 
 
+
+
+/******************************************************************************
+      函数说明：W25Q32片擦除
+      入口数据：address 擦除开始地址
+      返回值：  无
+******************************************************************************/
+void Flash_Erase_Page(uint32_t address)
+{
+	 uint8_t cmd[4];
+	 cmd[0] = W25_PAGE_PROGRAM;
+	 cmd[1] = (uint8_t)(address >> 16);
+	 cmd[2] = (uint8_t)(address >> 8);
+	 cmd[3] = (uint8_t)(address);
+	 Flash_Write_Enable();
+	 W25_CS_CLR();
+	 HAL_SPI_Transmit(&hspi1, cmd, 4, 1000);
+	 W25_CS_SET();
+	 Flash_CheckStat();
+}
 /******************************************************************************
       函数说明：W25Q32块擦除
       入口数据：address 擦除开始地址
       返回值：  无
 ******************************************************************************/
-void Flash_Erase(uint32_t address)
+void Flash_Erase_Block(uint32_t address)
 {
 	 uint8_t cmd[4];
 	 cmd[0] = W25_BLOCK_ERASE;
@@ -96,6 +116,7 @@ void Flash_Read_Data(uint8_t *Data, uint16_t len, uint32_t address)
 	 HAL_SPI_Receive(&hspi1, Data, len, 1000);
 	 W25_CS_SET();
 }
+
 
 
 /******************************************************************************

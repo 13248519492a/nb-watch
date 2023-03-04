@@ -56,7 +56,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+extern uint8_t Lcd_Bck_Pwm;
 /* USER CODE END 0 */
 
 /**
@@ -91,16 +91,21 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM10_Init();
   MX_TIM4_Init();
+  MX_TIM11_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim10);
+	HAL_TIM_Base_Start_IT(&htim10);
 	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+	Flash_Read_Data(&Lcd_Bck_Pwm, 1, 0x000000);
 	lv_init();
 	lv_port_disp_init();
 	lv_port_indev_init();
 	lvgl_init();
+	//lvgl_home();
+	//demo();
 	set_bck();
   /* USER CODE END 2 */
-#include "lv_conf.h"
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -161,7 +166,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+static uint8_t tim11_cout = 0;
 /* USER CODE END 4 */
 
 /**
@@ -184,6 +189,17 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	if(htim->Instance == TIM10)
 	{
 		lv_tick_inc(1);
+	}
+	if(htim->Instance == TIM11)
+	{
+		tim11_cout++;
+		if(tim11_cout != 1)
+		{
+			LCD_CS_Set();
+			Flash_Erase_Page(0x000000);
+			Flash_Write_Data(&Lcd_Bck_Pwm, 1, 0x000000);
+			LCD_CS_Clr();
+		}
 	}
   /* USER CODE END Callback 1 */
 }

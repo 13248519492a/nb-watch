@@ -170,5 +170,8 @@ demo\lv_port_disp_template.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\lv_port_disp_template.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\lv_port_disp_template.o: ../app/inc/button.h
 demo\lv_port_disp_template.o: ../Core/Inc/gpio.h
+demo\lv_port_disp_template.o: ../app/inc/W25Q32.h
 demo\lv_port_disp_template.o: ../Core/Inc/spi.h
+demo\lv_port_disp_template.o: ../Core/Inc/main.h
+demo\lv_port_disp_template.o: ../Core/Inc/dma.h
 demo\lv_port_disp_template.o: ../Core/Inc/tim.h

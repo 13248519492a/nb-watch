@@ -171,4 +171,5 @@ demo\w25q32.o: ../app/inc/lvgl_func.h
 demo\w25q32.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\w25q32.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\w25q32.o: ../app/inc/button.h
+demo\w25q32.o: ../app/inc/W25Q32.h
 demo\w25q32.o: ../Core/Inc/dma.h

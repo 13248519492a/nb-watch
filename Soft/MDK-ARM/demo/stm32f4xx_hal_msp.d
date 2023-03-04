@@ -169,3 +169,5 @@ demo\stm32f4xx_hal_msp.o: ../app/inc/lvgl_func.h
 demo\stm32f4xx_hal_msp.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\stm32f4xx_hal_msp.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\stm32f4xx_hal_msp.o: ../app/inc/button.h
+demo\stm32f4xx_hal_msp.o: ../app/inc/W25Q32.h
+demo\stm32f4xx_hal_msp.o: ../Core/Inc/dma.h

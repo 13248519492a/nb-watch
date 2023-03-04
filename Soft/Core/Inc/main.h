@@ -38,6 +38,7 @@ extern "C" {
 #include "lvgl_func.h"
 #include "lv_port_indev_template.h"
 #include "button.h"
+#include "W25Q32.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

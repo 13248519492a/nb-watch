@@ -170,3 +170,5 @@ demo\gpio.o: ../app/inc/lvgl_func.h
 demo\gpio.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\gpio.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\gpio.o: ../app/inc/button.h
+demo\gpio.o: ../app/inc/W25Q32.h
+demo\gpio.o: ../Core/Inc/dma.h

@@ -20,7 +20,8 @@
 #define W25_CS_SET()		HAL_GPIO_WritePin(GPIOB, W25Q32_CS_Pin, GPIO_PIN_SET)
 #define W25_CS_CLR()		HAL_GPIO_WritePin(GPIOB, W25Q32_CS_Pin, GPIO_PIN_RESET)
 
-void Flash_Erase(uint32_t address);
+void Flash_Erase_Block(uint32_t address);
+void Flash_Erase_Page(uint32_t address);
 void Flash_Write_Data(uint8_t *Data, uint8_t len, uint32_t address);
 void Flash_Read_Data(uint8_t *Data, uint16_t len, uint32_t address);
 void Flash_while_Write(uint8_t *Data, uint16_t len, uint32_t address, uint32_t lastlen);

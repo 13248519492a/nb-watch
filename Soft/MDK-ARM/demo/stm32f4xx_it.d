@@ -169,4 +169,6 @@ demo\stm32f4xx_it.o: ../app/inc/lvgl_func.h
 demo\stm32f4xx_it.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\stm32f4xx_it.o: ../lvgl/examples/porting/lv_port_indev_template.h
 demo\stm32f4xx_it.o: ../app/inc/button.h
+demo\stm32f4xx_it.o: ../app/inc/W25Q32.h
+demo\stm32f4xx_it.o: ../Core/Inc/dma.h
 demo\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h
